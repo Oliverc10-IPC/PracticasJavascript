@@ -35,4 +35,19 @@ function imprimirReceta(nombreReceta,ing1,ing2,ing3,ing4,ing5){
     var mensaje = `Mi Bolsa de Comida: Nombre de la receta: ${nombreReceta}, Ingredientes: ${ing1}, ${ing2}, ${ing3}, ${ing4}, ${ing5}`;
     console.log(mensaje);
 }  
-imprimirReceta("Pasta al Pesto","pasta","queso","pesto","aceite oliva", "especies");
+
+function encabezadoEvento(evento,lugar){
+var mensaje = `Evento: ${evento}. Lugar: ${lugar}`
+return mensaje;
+}
+
+function limpiarNombreParticipante(nombreApellido){
+  var mensaje= nombreApellido.split(",");
+  var nombre = mensaje[0].trim().toLowerCase();
+  var apellido=mensaje[1].trim().toUpperCase();
+  var nombreLimpio= `${apellido}, ${nombre}`;
+  return nombreLimpio;
+}
+
+console.log(encabezadoEvento("Curso de desarrollo","Online"));
+console.log(limpiarNombreParticipante("   OLIVER,    CrUz     "));
